@@ -30,32 +30,21 @@
  }
 
  /*GENERAL LAYOUT*/
- .container{
- 	width: 1200px;  
- 	margin: 0 auto;
- }
+ 
   
-  .row{
-  	overflow: hidden;
-  }
- .column-half{
- 	margin: 0 12px 24px 12px;
- 	width: 576px;
- 	float: left;
- }
- .container-center{
- 	margin: 0 auto 96px auto;
- 	width: 600px;
- 	text-align: center;
- }
+ 
 
  /*HEADER*/
  .header-homepage{
    	background: url(../image/header-homepage.jpg) 0 0 no-repeat;
- 	height: 600px;
  	background-size: 100%;
- 	margin-bottom: 96px;
+ 	margin-bottom: 7%;
+ 	height: 660px;
  }
+.header-homepage .container-fluid{
+	padding: 3% 0 3%;
+}
+
  .header-portfolio{
  	background: url(../image/header-portfolio.jpg) 0 0 no-repeat;
  	height: 330px;
@@ -74,39 +63,33 @@
 
  
  
- nav{
- 	float: right;
- }
+ 
  	nav ul{
  		list-style-type: none;
  		margin: 0;
+ 		float: right;
  	} 
- 		nav ul li{
- 			display: inline;
- 			margin-left: 24px;
- 		}
+ 	
+ 		
  			nav ul li a{
  				color: white;
  				text-transform: uppercase;
   				font-weight: bold;
  				font-size: 14px;
  			}
- .top-container{
- 	overflow: hidden;
- 	padding: 48px 0;			
- }
+ 
  .header-hr{
 	background-color: rgba(255, 255, 255, .1);
 	border: 0;
 	height: 1px;
 	margin-top: 0;
-	margin-bottom: 96px;
+	margin-bottom: 3% ;
 }
 
 .header-contents{
 	text-align: center;
 	color: white;
-	padding: 0 200px;
+	padding: 3% 20%;
 }
 	.header-contents p{
 		margin-bottom: 48px;
@@ -116,19 +99,30 @@
 .btn{
 	display: inline-block;
 	height: 48px;
-	width: 200px;
+	width: 150px;
 	border:1px solid #f2ae5d;
 	color: #f2ae5d;
 	text-transform: uppercase;
 	font-weight: bold;
-	padding-top: 10px;
+	padding-top: 6px;
 }	
+
+.btn-nav{
+	display: inline-block;
+	height: 36px;
+	width: 100px;
+	border:1px solid #f2ae5d;
+	color: #f2ae5d;
+	font-weight: bold;
+	padding-top: 6px;
+}
 	.btn:hover{
 		text-decoration: none;
 		background-color: #f2ae5d;
 		color:#2e2e2e;
 	}
 
+	
 	/*FOOTER*/
 	footer{
 		background-color: #333538;
@@ -144,7 +138,7 @@
 		width: 300px;
 		padding: 0 12px;
 	}	
-	form input[type="submit"]{
+	.sub-mail{
 		background-color: transparent;
 		height: 48px;
 		padding: 0 12px;
@@ -187,3 +181,53 @@
 	 		margin-bottom: 24px;
 	 	}	
 	 	
+
+	 .about-content{
+	 	text-align: center;
+	 }
+
+	 .message{
+		margin-left: 3%;
+	 }
+
+	 @media (max-width: 1028px){
+	 	.contact{
+	 		margin: 3%;
+	 	}
+
+
+	 }
+
+/*Forms*/
+.sign-up{
+	border-radius: 5px;
+	background-color: f2f2f2;
+	padding: 7% 15%;
+}
+
+.txt-input, input[type=password]{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.sub-sign{
+	width: 100%;
+	background-color: #4caf50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+	.sub-sign:hover{
+		background-color: #45a049;
+	}
+
+

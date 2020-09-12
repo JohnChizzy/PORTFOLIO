@@ -4,9 +4,6 @@
 		<TITLE>Portfolio</TITLE>
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
-
-		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
 	</HEAD>
 
 
@@ -38,45 +35,44 @@
 	 			
 	 			<hr class="header-hr">
 	 			<div class="header-contents">
-	 				<h1>Project name</h1>
-	 				<p> More than all these little things, the feeling of excitement in this place is pure bliss. It comes with a great price, are you willing to pay for it. Hop on </p>
-	 				<p><a href="portfolio.html" class="btn">See Details</a></p>
+	 				<h1>Welcome Back</h1>
+	 				<p>We are glad to have you here! 😵</p>
 	 			</div> <!--end header-content-->
 	 	</div> <!-- end of container-fluid -->
 		</header>
-		
-		<!--PORTFOILIO AREA-->
-		 <div class="container-fluid">
-		 	<div class="row">
-		 		<div class="col-lg-6 port-pad">
-		 			<a href="portfolio.html"><img src="image/portfolio-image.jpg" alt="Portfolio"></a>
-		 			<h3>Project title</h3>
-		 			<p> More than all these little things, the feeling of excitement in this place is pure bliss. It comes with a great price, are you willing to pay for it. Hop on</p> 
-		 			<p><a href="portfolio.html">See details &rarr;</a></p>
-		 		</div> <!--end column-half-->
-		 		<div class="col-lg-6  port-pad">
-		 			<a href="portfolio.html"><img src="image/portfolio-image.jpg" alt="Portfolio"></a>
-		 			<h3>Project title</h3>
-		 			<p> More than all these little things, the feeling of excitement in this place is pure bliss. It comes with a great price, are you willing to pay for it. Hop on</p> 
-		 			<p><a href="portfolio.html">See details &rarr;</a></p>
-		 		</div> <!--end column-half-->
-		 	</div> <!--end row-->
-		 	
-		 	<div class="row">	
-		 		<div class="col-lg-6  port-pad">
-		 			<a href="portfolio.html"><img src="image/portfolio-image.jpg" alt="Portfolio"></a>
-		 			<h3>Project title</h3>
-		 			<p> More than all these little things, the feeling of excitement in this place is pure bliss. It comes with a great price, are you willing to pay for it. Hop on</p> 
-		 			<p><a href="portfolio.html">See details &rarr;</a></p>
-		 		</div> <!--end column-half-->
-		 		<div class="col-lg-6  port-pad">
-		 			<a href="portfolio.html"><img src="image/portfolio-image.jpg" alt="Portfolio"></a>
-		 			<h3>Project title</h3>
-		 			<p>More than all these little things, the feeling of excitement in this place is pure bliss. It comes with a great price, are you willing to pay for it. Hop on</p> 
-		 			<p><a href="portfolio.html">See details &rarr;</a></p>
-		 		</div> <!--end column-->
-		 	</div> <!--end row-->
-		   </div> <!--end container-->
+		<!-- Forms -->
+		<div class="container-fluid sign-up">
+			<h2>Create Your Account Here</h2>
+		<form  name ="frmRegister" method="post" action="register.aspx" onsubmit="return validate(this)" >
+			<div>
+				<label for= "txtUserName">Username</label>
+				<input type ="text" name="txtUsername" id="txtUserName" size="12" class="txt-input" placeholder="Username" /><span class="message">*Use 6 or more characters</span>
+			</div>
+			<div>
+				<label for="fname">First Name</label>
+				<input type="text" name="firstname" id="fname" class="txt-input" placeholder="Your name">
+			</div>
+			<div>
+				<label for="lname">Last Name</label>
+				<input type="text" name="lastname" id="lname" class="txt-input" placeholder="Your last name">
+			</div>
+			<div>
+				<label for="txtPassword">Password</label>
+				<input type="password" name="txtPassword" id="txtPassword" size="12"/><span class="message">*Use 6 or more characters</span>
+			</div>
+			<div>
+				<label for="txtPassword2">Confirm your password</label>
+				<input type="password" name="txtPassword2" id="txtPassword2" size="12"/><span class="message"></span>
+			</div>	
+			<div>
+				<input class="sub-sign" type="submit" value="Sign Up"/>
+			</div>
+			<div>
+				<p>Already have an Account? <a href="signin.html">Sign In</a></p>
+			</div>
+
+		</form>
+		</div> <!-- End form -->
 
 		 <!--footer-->
 		 <footer>
@@ -113,6 +109,19 @@
 		 <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
 		<script type="text/javascript" src="js/popper.min.js"></script>
 		<script  type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/formvalid.js"></script>
+		<script type = "text/javascript">
+			function validate(form){
+				var returnValue = "";
+				returnValue += validateConfirmPassword(form.txtPassword, form.txtPassword2, '*Your password did not match');
+				returnValue += validateMinimumLength(form.txtPassword, 6, "*Your password must be at least 6 characters long");
+				returnValue += validateMinimumLength(form.txtUsername, 6, '*Your username must be at least 6 characters long');
+				if (returnValue != "") {
+					return false;
+				}
+				return true;
+		}
+		</script>
 
 	
 
